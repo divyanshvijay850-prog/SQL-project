@@ -1,0 +1,28 @@
+-- Introduction to SQL
+-- What is SQL?
+-- SQL stands for **Structured Query Language**. It is a standard language used to store, retrieve, update, and delete data from a database.
+-- SQL is used to ask questions (queries) to a database.
+--  Why SQL is Important
+--  Databases store large amounts of data
+-- SQL helps us manage that data efficiently
+-- SQL is used in almost every application that works with data
+--  Where is SQL Used? SQL is used with many database systems, such as:
+-- * MySQL
+-- * PostgreSQL
+-- * Oracle
+-- * SQL Server
+-- * SQLite
+-- The basic SQL concepts are the same across all databases.
+--  Basic SQL Terms
+-- 1. Database
+-- A database is a collection of organized data
+ -- column represents a specific attribute of the
+-- id, name, marks
+-- Types of SQL Commands
+
+--  Type  Description                 Examples             
+ -- DML   Data Manipulation Language    INSERT, UPDATE, DELETE 
+-- DQL   Data Query Language           SELECT                 
+-- DCL   Data Control Language         GRANT, REVOKE          
+-- TCL   Transaction Control Language  COMMIT, ROLLBACK       
+
