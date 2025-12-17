@@ -10,11 +10,9 @@ select customer_id,count(amount)from payment where month(payment_date)=5 group b
 select*from payment;
 select staff_id, count(amount) ,avg(amount),sum(amount) from payment group by staff_id ;
 select *from payment where customer_id%2=0;
--- get the aomunt and the total trasnation of each amount only for the payment done through  only done staff _id  one a  and total trasnation amount should be grater then 30
+-- get the aomunt and the total trasnation of each amount only for the payment done through only one staff _id and total trasnation amount should be grater then 30
 select amount,count(*) from payment where staff_id=1 group by amount
 having count(*)>30;
--- find out the number of cutomer  serve  along with  and the total amount spend and each month for staff_id 1  or 2
---- for each month spend of each month and each year
 select*from payment;
 select count(customer_id ), avg(amount),sum(amount) ,extract(month from payment_date) from payment where staff_id =1 or staff_id=2
 group by extract(month from payment_date);
