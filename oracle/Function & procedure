@@ -1,0 +1,24 @@
+create or replace function mytest return int is
+-- begin
+--     dbms_output.put_line('function called');
+--     return 1;
+-- end;
+-- /
+
+Declare
+--     x int :=10;
+--     y int :=0;
+-- BEGIN
+
+--     SECOND_PROCEDURE(x,y);
+--     dbms_output.put_line('Return of but y variable:'|| ''|| y);
+-- end;
+
+Declare
+    x int :=10;
+    
+BEGIN
+
+    SECOND_PROCEDURE(x);
+    dbms_output.put_line('Return of but y variable:'|| ''|| x);
+end;
