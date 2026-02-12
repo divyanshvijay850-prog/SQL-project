@@ -1,0 +1,50 @@
+ Triggers - Triggers are block of code when a event happen
+-- -- event like insert ,update,delete
+-- -- this trggers are stroed in the database
+-- -- any DML operations
+-- -- 
+-- -- Triggers syntax
+
+-- -- create table emp_copy
+-- -- as
+-- -- select employee_id,first_name from hr.EMPLOYEES where employee_id BETWEEN
+-- -- 100 and 105;
+
+-- -- SELECT *from EMP_COPY;
+
+-- create or replace Trigger emp_Trigger_1
+-- before insert
+-- on emp_copy
+-- begin
+     
+--      dbms_output.put_line('Trigger called before the insert statement');
+-- end;
+
+-- create or replace trigger emp_Trigger_2
+-- after INSERT
+-- on emp_copy
+-- BEGIN
+--     DBMS_OUTPUT.PUT_LINE('Triggers called after the insert');
+
+-- end;
+
+create or replace trigger emp_Trigger_2
+after update or insert
+on emp_copy
+for each ROW
+BEGIN
+    if updating then
+
+    DBMS_OUTPUT.PUT_LINE('Triggers called after the update statement');
+    else 
+      DBMS_OUTPUT.PUT_LINE('Inserted');
+      
+    end if;
+      
+end
+
+-update  EMP_COPY set FIRST_NAME='aman';
+
+--select *from EMP_COPY;
+
+insert into  EMP_COPY values (101,'regex');
